@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin</title>
+</head>
+<body>
+  <h1>Add Product</h1>
+
+  <form action="/add-product" method="POST">
+    <input type="text" name="title" placeholder="Title" required />
+    <input type="number" name="price" placeholder="Price" required />
+    <button type="submit">Add</button>
+  </form>
+
+  <h2>Existing Products</h2>
+  <ul>
+    <% products.forEach(product => { %>
+      <li><%= product.title %> - $<%= product.price %></li>
+    <% }) %>
+  </ul>
+
+  <a href="/">Back to Shop</a>
+</body>
+</html>
